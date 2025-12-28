@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vatsal Varma | Portfolio</title>
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
 * {
@@ -19,14 +22,14 @@ body {
   color: #222;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
   padding: 15px 60px;
-  background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background: linear-gradient(90deg, #0077ff, #00c6ff);
+  box-shadow: 0 4px 20px rgba(0, 119, 255, 0.4);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,75 +37,85 @@ nav {
 }
 
 nav h2 {
-  color: #0077ff;
+  color: white;
+  letter-spacing: 1px;
 }
 
 nav ul {
   display: flex;
-  list-style: none;
   gap: 25px;
+  list-style: none;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: white;
   font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 5px;
   transition: 0.3s;
 }
 
 nav ul li a:hover {
-  color: #0077ff;
+  background: rgba(255, 255, 255, 0.2);
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 section {
-  padding: 100px 10%;
+  padding: 120px 10%;
   min-height: 100vh;
 }
 
-/* HOME */
+/* ================= HOME ================= */
 #home {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 50px;
 }
 
 .home-text h1 {
-  font-size: 60px;
+  font-size: 65px;
   color: #0077ff;
 }
 
 .home-text p {
-  margin: 20px 0;
   font-size: 18px;
-  max-width: 500px;
+  margin: 20px 0;
+  max-width: 520px;
 }
 
 .btn {
   display: inline-block;
-  padding: 12px 28px;
+  padding: 14px 35px;
   background: #0077ff;
   color: white;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
-  box-shadow: 0 8px 20px rgba(0,119,255,0.3);
+  box-shadow: 0 10px 25px rgba(0,119,255,0.4);
 }
 
 .btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(0,119,255,0.6);
+  transform: scale(1.07);
+  box-shadow: 0 15px 40px rgba(0,119,255,0.7);
 }
 
-/* IMAGE */
+/* BIGGER IMAGE */
 .home-img img {
-  width: 420px;
+  width: 550px; /* INCREASED SIZE */
   max-width: 100%;
+  animation: float 3s ease-in-out infinite;
 }
 
-/* ABOUT */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+  100% { transform: translateY(0); }
+}
+
+/* ================= ABOUT ================= */
 #about h2,
 #projects h2,
 #contact h2 {
@@ -117,7 +130,7 @@ section {
   line-height: 1.7;
 }
 
-/* PROJECTS */
+/* ================= PROJECTS ================= */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -126,16 +139,16 @@ section {
 }
 
 .project {
+  background: #f9f9f9;
   padding: 25px;
   border-radius: 15px;
-  background: #f9f9f9;
-  transition: 0.3s;
+  transition: 0.4s;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
 .project:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 25px rgba(0,119,255,0.4);
+  transform: translateY(-12px);
+  box-shadow: 0 0 30px rgba(0,119,255,0.4);
 }
 
 .project h3 {
@@ -143,7 +156,7 @@ section {
   margin-bottom: 10px;
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
 #contact p {
   font-size: 18px;
   margin: 10px 0;
@@ -151,11 +164,11 @@ section {
 
 #contact a {
   color: #0077ff;
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 @media(max-width: 900px) {
   #home {
     flex-direction: column;
@@ -163,7 +176,7 @@ section {
   }
 
   .home-img img {
-    width: 300px;
+    width: 320px;
   }
 }
 </style>
@@ -181,67 +194,66 @@ section {
   </ul>
 </nav>
 
-<!-- HOME -->
 <section id="home">
-  <div class="home-text">
+  <div class="home-text" data-aos="fade-right">
     <h1>Hi, I'm Vatsal Varma</h1>
     <p>
-      Full Stack Java Developer skilled in building scalable web applications,
-      REST APIs, and modern UI using React, Spring Boot, and cloud technologies.
+      Full Stack Java Developer skilled in building scalable applications using
+      Java, Spring Boot, React, and modern web technologies.
     </p>
     <a href="#projects" class="btn">View My Work</a>
   </div>
 
-  <div class="home-img">
-    <img src="dev.png" alt="Web Developer">
+  <div class="home-img" data-aos="fade-left">
+    <img src="https://cdn-icons-png.flaticon.com/512/4202/4202849.png" alt="Developer">
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
+<section id="about" data-aos="fade-up">
   <h2>About Me</h2>
   <p>
-    I am a Full Stack Java Developer with strong experience in Java, Spring Boot,
-    React.js, and RESTful APIs. I have hands-on experience working with databases
-    like MySQL and MongoDB, and I enjoy building scalable, secure, and efficient
-    applications. I am eager to grow in cloud technologies like AWS, Docker, and Kubernetes.
+    I am a Full Stack Java Developer with experience in building secure and scalable
+    applications using Spring Boot, React, REST APIs, and databases like MySQL and MongoDB.
   </p>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
-  <h2>Projects</h2>
+  <h2 data-aos="fade-up">Projects</h2>
 
   <div class="projects-grid">
-    <div class="project">
+    <div class="project" data-aos="zoom-in">
       <h3>E-Commerce Website</h3>
-      <p>React + Spring Boot + MySQL platform with authentication, cart, and order management.</p>
+      <p>React + Spring Boot based platform with authentication and order management.</p>
     </div>
 
-    <div class="project">
+    <div class="project" data-aos="zoom-in">
       <h3>Job Application System</h3>
-      <p>Microservices-based system with REST APIs, scalability, and AWS deployment.</p>
+      <p>Microservices-based system with REST APIs and scalable architecture.</p>
     </div>
 
-    <div class="project">
+    <div class="project" data-aos="zoom-in">
       <h3>Todo List Application</h3>
-      <p>CRUD-based task manager using Spring Boot, Thymeleaf, and MySQL.</p>
+      <p>Task management app using Spring Boot and Thymeleaf.</p>
     </div>
 
-    <div class="project">
-      <h3>Real-Time Chat Application</h3>
-      <p>WebSocket-based chat app with authentication and live messaging.</p>
+    <div class="project" data-aos="zoom-in">
+      <h3>Real-Time Chat App</h3>
+      <p>WebSocket-based chat application with authentication.</p>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
+<section id="contact" data-aos="fade-up">
   <h2>Contact</h2>
   <p>Email: <a href="mailto:varmavatsal26@gmail.com">varmavatsal26@gmail.com</a></p>
   <p>GitHub: <a href="https://github.com/vatsalvarma" target="_blank">github.com/vatsalvarma</a></p>
   <p>Phone: <a href="tel:+919686874348">+91 9686874348</a></p>
 </section>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
 
 </body>
 </html>
