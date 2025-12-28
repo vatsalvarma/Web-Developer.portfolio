@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Vatsal Varma | Portfolio</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #222;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 60px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+nav h2 {
+  color: #0077ff;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #0077ff;
+}
+
+/* SECTIONS */
+section {
+  padding: 100px 10%;
+  min-height: 100vh;
+}
+
+/* HOME */
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.home-text h1 {
+  font-size: 60px;
+  color: #0077ff;
+}
+
+.home-text p {
+  margin: 20px 0;
+  font-size: 18px;
+  max-width: 500px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #0077ff;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(0,119,255,0.3);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,119,255,0.6);
+}
+
+/* IMAGE */
+.home-img img {
+  width: 420px;
+  max-width: 100%;
+}
+
+/* ABOUT */
+#about h2,
+#projects h2,
+#contact h2 {
+  font-size: 36px;
+  color: #0077ff;
+  margin-bottom: 20px;
+}
+
+#about p {
+  max-width: 800px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* PROJECTS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project {
+  padding: 25px;
+  border-radius: 15px;
+  background: #f9f9f9;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0,119,255,0.4);
+}
+
+.project h3 {
+  color: #0077ff;
+  margin-bottom: 10px;
+}
+
+/* CONTACT */
+#contact p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+#contact a {
+  color: #0077ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  #home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-img img {
+    width: 300px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>VATSAL</h2>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+  <div class="home-text">
+    <h1>Hi, I'm Vatsal Varma</h1>
+    <p>
+      Full Stack Java Developer skilled in building scalable web applications,
+      REST APIs, and modern UI using React, Spring Boot, and cloud technologies.
+    </p>
+    <a href="#projects" class="btn">View My Work</a>
+  </div>
+
+  <div class="home-img">
+    <img src="https://cdn-icons-png.flaticon.com/512/4202/4202849.png" alt="Web Developer">
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a Full Stack Java Developer with strong experience in Java, Spring Boot,
+    React.js, and RESTful APIs. I have hands-on experience working with databases
+    like MySQL and MongoDB, and I enjoy building scalable, secure, and efficient
+    applications. I am eager to grow in cloud technologies like AWS, Docker, and Kubernetes.
+  </p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="projects-grid">
+    <div class="project">
+      <h3>E-Commerce Website</h3>
+      <p>React + Spring Boot + MySQL platform with authentication, cart, and order management.</p>
+    </div>
+
+    <div class="project">
+      <h3>Job Application System</h3>
+      <p>Microservices-based system with REST APIs, scalability, and AWS deployment.</p>
+    </div>
+
+    <div class="project">
+      <h3>Todo List Application</h3>
+      <p>CRUD-based task manager using Spring Boot, Thymeleaf, and MySQL.</p>
+    </div>
+
+    <div class="project">
+      <h3>Real-Time Chat Application</h3>
+      <p>WebSocket-based chat app with authentication and live messaging.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:varmavatsal26@gmail.com">varmavatsal26@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/vatsalvarma" target="_blank">github.com/vatsalvarma</a></p>
+  <p>Phone: <a href="tel:+919686874348">+91 9686874348</a></p>
+</section>
+
+</body>
+</html>
