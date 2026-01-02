@@ -187,17 +187,14 @@ section {
 }
 
 /* ================= CONTACT ================= */
-.contact-icons-bottom {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+.contact-icons {
   display: flex;
+  justify-content: center;
   gap: 40px;
-  z-index: 1000;
+  margin-top: 30px;
 }
 
-.contact-icons-bottom a {
+.contact-icons a {
   background: rgba(0,119,255,0.2);
   padding: 22px;
   border-radius: 50%;
@@ -206,14 +203,15 @@ section {
   transition: 0.3s;
 }
 
-.contact-icons-bottom a:hover {
+.contact-icons a:hover {
   transform: scale(1.2);
   box-shadow: 0 0 45px rgba(0,119,255,0.9);
 }
 
-.contact-icons-bottom img {
+.contact-icons img {
   width: 60px;
 }
+
 
 /* ================= RESPONSIVE ================= */
 @media(max-width: 900px) {
@@ -303,16 +301,16 @@ section {
 
 <section id="contact">
   <h2>Contact</h2>
+  <div class="contact-icons">
+    <a href="https://github.com/vatsalvarma" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+    </a>
+    <a href="https://www.linkedin.com/in/vatsal-varma-2bb681294/" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg">
+    </a>
+  </div>
 </section>
 
-<div class="contact-icons-bottom">
-  <a href="https://github.com/vatsalvarma" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
-  </a>
-  <a href="https://www.linkedin.com/in/vatsal-varma-2bb681294/" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg">
-  </a>
-</div>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
